@@ -1,5 +1,4 @@
 
-
 val df = spark.read.format("csv").load("dataset/fb_price-history.csv") 
 
 df.show()
