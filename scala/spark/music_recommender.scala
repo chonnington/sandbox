@@ -33,3 +33,24 @@ val artistAlias = rawArtistAlias.flatMap { line =>
         Some((artist.toInt, alias.toInt))
     }
 }.collect().toMap
+
+//////////////////////////////////////////////////////////////////////////////////
+
+import org.apache.spark.sql._
+import org.apache.spark.broadcast._
+
+def buildCounts(
+    rawUserArtistData: Dataset[String],
+    bArtistAlias: Broadcast[Map[Int,Int]]): DataFrame = {
+        rawUserArtistData.map { line =>
+                val Array(userID, artistID, count) = line.split(' ').map(_.toInt) 
+                val finalArtistID = bArtistAlias.value.getOrElse(artistID, artistID)
+                (userID, finalArtistID, count)
+            }.toDF("user", "artist", "count")
+            }
+
+val bArtistAlias = spark.sparkContext.broadcast(artistAlias)
+val trainData = buildCounts(rawUserArtistData, bArtistAlias)
+trainData.cache()
+
+//////////////////////////////////////////////////////////////////////////////////
