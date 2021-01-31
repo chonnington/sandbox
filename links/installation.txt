@@ -2,5 +2,10 @@
 Setting up Spark with Scala development environment using IntelliJ IDEA:
 https://medium.com/@Sushil_Kumar/setting-up-spark-with-scala-development-environment-using-intellij-idea-b22644f73ef1
 
+(Scala/Java) Run through simple packaging example
+https://spark.apache.org/docs/latest/quick-start.html
+
+[Make sure to move final .jar file to $SPARK_HOME - e.g., /Users/terrychon/Desktop/spark/spark-3.0.1-bin-hadoop3.2]
+
 Maven:
 https://mvnrepository.com/
