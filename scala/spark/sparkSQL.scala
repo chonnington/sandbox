@@ -2,7 +2,7 @@ import org.apache.spark.sql.catalyst.encoders.ExpressionEncoder
 import org.apache.spark.sql.Encoder
 import spark.implicits._
 
-val employeeDF = spark.sparkContext.textFile("examples/src/main/resources/employee.txt").map(_.split(",")).map(attributes =&amp;amp;amp;gt; Employee(attributes(0), attributes(1).trim.toInt)).toDF()
+val employeeDF = spark.sparkContext.textFile("examples/src/main/resources/employee.txt").map(_.split(",")).map(attributes => Employee(attributes(0), attributes(1).trim.toInt)).toDF()
 
 employeeDF.createOrReplaceTempView("employee")
 
