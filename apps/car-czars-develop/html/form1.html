@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"/> -->
+    <link rel="stylesheet" type="text/css" href="css/settings.css"> 
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/android-icon-36x36.png"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
+    <link rel="stylesheet" href="css/intlTelInput.css" type="text/css">
+    <link rel="stylesheet" href="css/dropzone.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <title>Car Czars</title>
+  </head>
+  <body>
+    
+
+  <header class="site-header">
+    <div class="header-dropdown">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-9">
+            <a href="index.html" class="logo">
+              <img src="images/logo.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/avatar1.jpg" alt="">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Parmy Singh Driver</a>
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Contact Us</a>
+                <a class="dropdown-item" href="#">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header> 
+
+
+  <section class="user-detail-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="user-detail-left">
+            <div class="image">
+              <img src="images/avatar2.jpg" alt="">
+            </div>
+            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+            <p><label for="file" style="cursor: pointer;" class="upload">Upload</label></p>
+            <p><img id="output" width="200" /></p>
+            <p>
+              Parmy Singh <br><a href="mailto:parminder_sehgal2004@yahoo.co.in"> parminder_sehgal2004@yahoo.co.in</a> 
+            </p>
+            <img src="images/question-mark.jpg" alt="">
+            <p>
+              Need Help? <br><a href="tel:214-396-4396">214-396-4396</a> 
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form id="msform">
+          <!-- progressbar -->
+          <ul id="progressbar">
+          <li class="active">Apply</li>
+          <li>Review</li>
+          <li>Drive</li>
+          </ul>
+          <!-- fieldsets -->
+          <fieldset class="form2-wrap">
+            <p class="strong"><span>!</span>NEXT STEP</p>
+            <p>Fill out the driver application and become a verified driver</p>
+            <h5>Driver Application</h5>
+            <label for="name">Driver's License Number <span class="required">*</span></label>
+            <input type="text" name="name" placeholder="First Name" />
+            <label for="cars">Driver's License State <span class="required">*</span></label>
+            <select name="cars" id="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+            <div class="uploader-box">
+              <p class="heading">Picture of License <span class="required">*</span></p>
+              <div id="myId" class="dropzone">
+                <img src="images/upload.png" alt="">
+                <div class="fallback">
+                  <input name="file" type="file" multiple />
+                </div>
+              </div>
+              <span class="note">Please submit a clear photo of your driver's license with all four edges showing.</span>
+            </div>
+            <label for="name"><span class="question">?</span> SSN <span class="required">*</span></label>
+            <input type="number" name="zip" placeholder="Zip" />
+            <label for="birthday">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="birthday" name="birthday">
+            <div class="uploader-box">
+              <p class="heading">Profile Picture <span class="required">*</span></p>
+              <div id="myId2" class="dropzone">
+                <img src="images/upload2.png" alt="">
+                <div class="fallback">
+                  <input name="file" type="file" multiple />
+                </div>
+              </div>
+              <span class="note">To get through the process faster, take a selfie style photo. No hats, sunglasses, or filter.</span>
+            </div>
+            <label for="name">First Name</label>
+            <input type="text" name="name" placeholder="First Name" />
+            <label for="name">Last Name</label>
+            <input type="text" name="address" placeholder="Last Name" />
+            <label for="birthday">Date of Birth</label>
+            <input type="date" id="birthday" name="birthday">
+            <label for="name">Phone Number</label>
+            <input id="phone" name="phone" type="number" class="form-control">
+            <label for="states">State <span class="required">*</span></label>
+            <select name="states" id="states">
+              <option value="volvo">California</option>
+              <option value="saab">1</option>
+              <option value="opel">2</option>
+              <option value="audi">3</option>
+            </select>
+            <label for="name">City</label>
+            <select name="states" id="states">
+              <option value="volvo">California</option>
+              <option value="saab">1</option>
+              <option value="opel">2</option>
+              <option value="audi">3</option>
+            </select>
+            <label for="name">Zip</label>
+            <input type="number" name="zip" placeholder="Zip" />
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">I certify that I am a registered ride-share driver (Lyft, Uber, etc), and that I am renting a vehicle to drive for work.</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">I am not currently signed up as a ride share driver but am in the application process.</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio3">I have not signed up yet.</label>
+            </div>
+            <h4>Billing Information</h4>
+            <div class="coupon-sec">
+              <label for="name">Have a coupon? Click here.</label>
+              <input type="text" name="address" placeholder="Last Name" />
+              <button type="submit" class="apply">Apply</button>
+            </div>
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" name="name" placeholder="First Name" />
+            <label for="name">Address <span class="required">*</span></label>
+            <input type="text" name="address" placeholder="Last Name" />
+            <div class="row">
+              <div class="col-md-4">
+                <label for="name">City <span class="required">*</span></label>
+                <input type="text" name="city" placeholder="City" />
+              </div>
+              <div class="col-md-4">
+                <label for="name">State <span class="required">*</span></label>
+                <input type="text" name="state" placeholder="State" />
+              </div>
+              <div class="col-md-4">
+                <label for="name">Zip <span class="required">*</span></label>
+                <input type="number" name="zip" placeholder="Zip" />
+              </div>
+            </div>
+            <label for="name">Card <span class="required">*</span></label>
+            <input type="number" name="zip" placeholder="Card Number" />
+            <div class="price-sec">
+                <p class="strong">Background Check Fee</p>
+                <p class="strong">$29.99</p>
+                <p>Your background check fee is due upon signing up but will be applied to your first weekly rental.</p>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">I agree to the background check</label>
+            </div>
+            <button type="submit" class="yellow">Please complete required fields above.</button>
+            <input type="button" name="next" class="next action-button submit" value="Submit Background Check">
+          </fieldset>
+            <fieldset>
+              <p>
+                Payment Information Please fill out your payment information
+              </p>
+              <p class="edit">
+                <a href="#">Edit</a>
+              </p>
+              <h4>Update Card</h4>
+              <label for="name">Name</label>
+              <input type="text" name="name" placeholder="Name" />
+              <label for="name">Address</label>
+              <input type="text" name="address" placeholder="Address" />
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="name">City</label>
+                  <input type="text" name="city" placeholder="City" />
+                </div>
+                <div class="col-md-4">
+                  <label for="name">State</label>
+                  <input type="text" name="state" placeholder="State" />
+                </div>
+                <div class="col-md-4">
+                  <label for="name">Zip</label>
+                  <input type="number" name="zip" placeholder="Zip" />
+                </div>
+              </div>
+              <label for="name">Card</label>
+              <input type="number" name="card" placeholder="Card" />
+              <input type="button" name="next" class="next action-button" value="Next" />
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+            </fieldset>
+            <fieldset>
+              <h4>Drive</h4>
+              <input type="text" name="fname" placeholder="First Name" />
+              <input type="text" name="lname" placeholder="Last Name" />
+              <input id="phone" name="phone" type="number" placeholder="Phone Number">
+              <textarea name="address" placeholder="Address"></textarea>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="submit" name="submit" class="submit action-button" value="Submit" />
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<!--     <script src="js/jquery-migrate-1.2.1.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dropzone.min.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(function() {
+
+      //jQuery time
+      var current_fs, next_fs, previous_fs; //fieldsets
+      var left, opacity, scale; //fieldset properties which we will animate
+      var animating; //flag to prevent quick multi-click glitches
+
+      $(".next").click(function(){
+      if(animating) return false;
+      animating = true;
+
+      current_fs = $(this).parent();
+      next_fs = $(this).parent().next();
+
+      //activate next step on progressbar using the index of next_fs
+      $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+      //show the next fieldset
+      next_fs.show(); 
+      //hide the current fieldset with style
+      current_fs.animate({opacity: 0}, {
+      step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale current_fs down to 80%
+      scale = 1 - (1 - now) * 0.2;
+      //2. bring next_fs from the right(50%)
+      left = (now * 50)+"%";
+      //3. increase opacity of next_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({'transform': 'scale('+scale+')'});
+      next_fs.css({'left': left, 'opacity': opacity});
+      }, 
+      duration: 800, 
+      complete: function(){
+      current_fs.hide();
+      animating = false;
+      }, 
+      //this comes from the custom easing plugin
+      easing: 'easeInOutBack'
+      });
+      });
+
+      $(".previous").click(function(){
+      if(animating) return false;
+      animating = true;
+
+      current_fs = $(this).parent();
+      previous_fs = $(this).parent().prev();
+
+      //de-activate current step on progressbar
+      $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+      //show the previous fieldset
+      previous_fs.show(); 
+      //hide the current fieldset with style
+      current_fs.animate({opacity: 0}, {
+      step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale previous_fs from 80% to 100%
+      scale = 0.8 + (1 - now) * 0.2;
+      //2. take current_fs to the right(50%) - from 0%
+      left = ((1-now) * 50)+"%";
+      //3. increase opacity of previous_fs to 1 as it moves in
+      opacity = 1 - now;
+      current_fs.css({'left': left});
+      previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+      }, 
+      duration: 800, 
+      complete: function(){
+      current_fs.hide();
+      animating = false;
+      }, 
+      //this comes from the custom easing plugin
+      easing: 'easeInOutBack'
+      });
+      });
+
+      $(".submit").click(function(){
+      return false;
+      })
+
+      });
+    </script>
+    <!-- <script>
+        var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script> -->
+    
+
+  </body>
+</html>

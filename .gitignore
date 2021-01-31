@@ -1,2 +1,14 @@
 .DS_Store
 .idea
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+apps/car-czars-develop/node_modules
+apps/car-czars-develop/public/hot
+apps/car-czars-develop/public/storage
+apps/car-czars-develop/storage/*.key
+apps/car-czars-develop/vendor
