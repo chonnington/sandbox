@@ -31,3 +31,22 @@ JavaPairRDD < String, Integer > counts = words.mapToPair(new PairFunction < Stri
 // Save the word count back out to a text file, causing evaluation.
 
 counts.saveAsTextFile(outputFile);
+
+JavaRDD < String > input = sc.textFile("s3://...")
+
+JavaRDD < String > words = rdd.flatMap(new FlatMapFunction < String, String > () {
+    public Iterable < String > call(String x) {
+        return Arrays.asList(x.split(" "));
+    }
+});
+
+JavaPairRDD < String, Integer > result = words.mapToPair(new PairFunction < String, String, Integer > () {
+    public Tuple2 < String, Integer > call(String x) {
+        return new Tuple2(x, 1);
+    }
+}).reduceByKey(
+        new Function2 < Integer, Integer, Integer > () {
+            public Integer call(Integer a, Integer b) {
+                return a + b;
+            }
+        });
