@@ -4,8 +4,11 @@ https://medium.com/@Sushil_Kumar/setting-up-spark-with-scala-development-environ
 
 (Scala/Java) Run through simple packaging example
 https://spark.apache.org/docs/latest/quick-start.html
-
 [Make sure to move final .jar file to $SPARK_HOME - e.g., /Users/terrychon/Desktop/spark/spark-3.0.1-bin-hadoop3.2]
+
+AWS - Getting Started with Amazon EMR:
+https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html
 
 Maven:
 https://mvnrepository.com/
+
