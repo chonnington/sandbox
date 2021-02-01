@@ -28,6 +28,9 @@ Piano Concerto No. 21: II
 Piano Sonata No. 14: II
 (Beethoven, Op. 27, C Sharp Minor)
 
+Violin Sonata No. 9 in A Major, ‘Kreutzer’
+(Beethoven, Op. 47)
+
 Piano Sonata No. 23: II
 (Beethoven, Op. 57, F Minor)
 
@@ -42,3 +45,4 @@ Holberg Suite, Op. 40 (Orch. Grieg): III. Gavotte.
 
 Je Te Veux
 [Satie]
+
