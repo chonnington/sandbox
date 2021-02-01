@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ScienceGenesis - Upload</title>
+	<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+	<!-- Bulma Version 0.8.2-->
+	<link rel="stylesheet" href="https://unpkg.com/bulma@0.8.2/css/bulma.min.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-brand">
+				<span class="navbar-burger burger" data-target="navbarMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<section class="hero is-fullheight">
+
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<div class="columns is-8 is-variable ">
+
+					<div class="column is-half has-text-left">
+
+						<h1 class="title is-1">ScienceGenesis Upload</h1>
+
+						<div id="file-js-example" class="file has-name">
+							<label class="file-label">
+							  <input class="file-input" type="file" name="resume">
+							  <span class="file-cta">
+								<span class="file-icon">
+								  <i class="fas fa-upload"></i>
+								</span>
+								<span class="file-label">
+								  Upload Research Article PDF…
+								</span>
+							  </span>
+							  <span class="file-name">
+								No file uploaded
+							  </span>
+							</label>
+						  </div>
+
+						</br>
+						
+						<embed src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7270045/pdf/main.pdf" width="600" height="500" type="application/pdf">
+
+					</div>
+
+					<div class="column is-half has-text-left">
+						<div class="field">
+							<label class="label">Title</label>
+							<div class="control">
+								<textarea class="textarea is-medium" rows="2" placeholder="e.g., COVID-19: consider cytokine storm syndromes and immunosuppression"></textarea>
+							</div>
+						</div>
+						
+						<div class="field">
+							<label class="label">Author</label>
+							<div class="control">
+								<textarea class="textarea is-medium" rows="3" placeholder="e.g., Puja Mehta, Daniel F McAuley, Michael Brown, Emilie Sanchez, Rachel S Tattersall, Jessica J Manson, and HLH Across Speciality Collaboration"></textarea>
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Subject Area</label>
+							<div class="control">
+								<textarea class="textarea is-medium" placeholder="COVID-19" rows="1"></textarea>
+							</div>
+						</div>
+						<div class="field">
+
+							<label class="label">Type of Article</label>
+
+							<div class="select is-multiple is-fullwidth">
+								<select multiple size="5">
+								  <option value="Primary Literature (Randomized Control Trial)">Primary Literature (Randomized Control Trial)</option>
+								  <option value="Primary Literature (Qualitative Research)">Primary Literature (Qualitative Research)</option>
+								  <option value="Primary Literature (Questionnaire Research)">Primary Literature (Questionnaire Research)</option>
+								  <option value="Secondary Literature (Systematic Analysis)">Secondary Literature (Systematic Analysis)</option>
+								  <option value="Secondary Literature (Meta-Analysis)">Secondary Literature (Meta-Analysis)</option>
+
+								</select>
+							  </div>
+
+						</div>
+						<div class="control">
+							<button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Submit Research Article</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+</body>
+
+</html>
+
+<script>
+	const fileInput = document.querySelector('#file-js-example input[type=file]');
+	fileInput.onchange = () => {
+	  if (fileInput.files.length > 0) {
+		const fileName = document.querySelector('#file-js-example .file-name');
+		fileName.textContent = fileInput.files[0].name;
+	  }
+	}
+</script>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  .cmn-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+  .cmn-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+  input.cmn-toggle-round + label {
+    padding: 2px;
+    width: 60px;
+    height: 30px;
+    background-color: #dddddd;
+    border-radius: 30px;
+  }
+  input.cmn-toggle-round + label:before,
+  input.cmn-toggle-round + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+  }
+  input.cmn-toggle-round + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    transition: background 0.4s;
+  }
+  input.cmn-toggle-round + label:after {
+    width: 29px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+  }
+  input.cmn-toggle-round:checked + label:before {
+    background-color: #8ce196;
+  }
+  input.cmn-toggle-round:checked + label:after {
+    margin-left: 30px;
+  }
+
+</style>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ScienceGenesis - Review</title>
+	<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+	<!-- Bulma Version 0.8.2-->
+	<link rel="stylesheet" href="https://unpkg.com/bulma@0.8.2/css/bulma.min.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-brand">
+				<span class="navbar-burger burger" data-target="navbarMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+
+	<!--
+
+	<h1 class="title is-1">ScienceGenesis Review</h1>
+						
+	<embed src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7270045/pdf/main.pdf" width="600" height="500" type="application/pdf">
+
+	-->
+
+	<section class="hero is-fullheight">
+
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<div class="columns is-8 is-variable ">
+					
+					<div class="column is-one-thirds has-text-left">
+
+					</div>
+
+					<div class="column is-two-thirds has-text-left">
+
+						<h1 class="title">Methods</h1>
+						
+						<div class="field">
+
+							<hr>
+							<h6 class="title is-6">Intervention</h6>
+							<hr>
+
+							<div class="control">
+								<label class="label">Control and intervention both outlined with explicit clarity</label>
+								<div class="switch">
+									<input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-1"></label>
+								</div>
+							</div>
+
+							</br>
+
+							<div class="control">
+								<label class="label">Test administration identified and explained</label>
+								<div class="switch">
+									<input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-2"></label>
+								</div>
+							</div>
+
+							</br>
+
+							<div class="control">
+								<label class="label">Core components of intervention defined with detail</label>
+								<div class="switch">
+									<input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-3"></label>
+								</div>
+                            </div>
+                            
+                            </br>
+
+							<div class="control">
+								<label class="label">Secondary/non-core components of intervention defined with detail</label>
+								<div class="switch">
+									<input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-4"></label>
+								</div>
+							</div>
+
+							<hr>
+							<h6 class="title is-6">Blinding</h6>
+							<hr>
+
+							<div class="control">
+
+								<label class="label">Administrators of study blinded to group assignment (control vs. treatment)</label>
+								
+								<div class="switch">
+									<input id="cmn-toggle-5" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-5"></label>
+								</div>
+
+							</div>
+
+							</br>
+
+							<div class="control">
+
+								<label class="label">Those assessing data and results blinded to group assignment</label>
+
+								<div class="switch">
+									<input id="cmn-toggle-6" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-6"></label>
+								</div>
+
+							</div>
+
+							</br>
+
+							<div class="control">
+
+								<label class="label">Methods for evaluating blinding methods shared</label>
+								
+								<div class="switch">
+									<input id="cmn-toggle-7" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-7"></label>
+								</div>
+
+							</div>
+
+                            </br>
+                            	
+						<hr>
+						<h1 class="title">Objectives/Hypothesis</h1>
+						<div class="field">
+							<hr>
+							<div class="control">
+								<label class="label">Are the specific objectives and/or hypothesis to be tested stated explicitly?</label>
+								<div class="switch">
+									<input id="cmn-toggle-11" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-11"></label>
+								</div>
+							</div>
+							</br>
+							<div class="control">
+								<label class="label">Primary and secondary outcome measures called out explicitly</label>
+								<div class="switch">
+									<input id="cmn-toggle-12" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-12"></label>
+								</div>
+							</div>
+							</br>
+							<div class="control">
+								<label class="label">Does the study actually test the author/s hypothesis?</label>
+								<div class="switch">
+									<input id="cmn-toggle-13" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-13"></label>
+								</div>
+							</div>
+							</br>
+							<div class="control">
+								<label class="label">Is the importance of the research explained?</label>
+								<div class="switch">
+									<input id="cmn-toggle-14" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-14"></label>
+								</div>
+							</div>
+							</br>
+
+							<hr>
+							<h1 class="title">Results/Discussion</h1>
+							<div class="field">
+								<hr>
+								<div class="control">
+									<label class="label">Results are communicated in straightforward, understandable way</label>
+								<div class="switch">
+									<input id="cmn-toggle-15" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-15"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Protocol deviations explained and justified</label>
+								<div class="switch">
+									<input id="cmn-toggle-16" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-16"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Recruitment dates and figures shared</label>
+								<div class="switch">
+									<input id="cmn-toggle-17" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-17"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Outcomes broadly characterized [?] or individualized to each group/subset [+]</label>
+								<div class="switch">
+									<input id="cmn-toggle-18" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-18"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Did findings vary across subgroups? Author provide explanation? </label>
+								<div class="switch">
+									<input id="cmn-toggle-19" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-19"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Are results justified</label>
+								<div class="switch">
+									<input id="cmn-toggle-20" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-20"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Any sources of potential bias</label>
+								<div class="switch">
+									<input id="cmn-toggle-21" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-21"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">Respond to original hypothesis [+] or deviate [-]</label>
+								<div class="switch">
+									<input id="cmn-toggle-22" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-22"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">How generalizable to broader applications are the findings, did author defend and explain</label>
+								<div class="switch">
+									<input id="cmn-toggle-23" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-23"></label>
+								</div>
+								</div>
+								</br>
+								<div class="control">
+									<label class="label">What further research is needed? Explain where the focus should be?</label>
+								<div class="switch">
+									<input id="cmn-toggle-24" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cmn-toggle-24"></label>
+								</div>
+								</div>
+								</br>
+
+							</br>
+						</br>
+						<hr>
+								<button class="button is-fullwidth is-medium is-outlined is-link">Submit</button>
+						<hr>
+						<!-- <div class="control">
+							<button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Submit Research Article</button>
+						</div> -->
+
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+</body>
+
+</html>
+
+<script>
+	const fileInput = document.querySelector('#file-js-example input[type=file]');
+	fileInput.onchange = () => {
+	  if (fileInput.files.length > 0) {
+		const fileName = document.querySelector('#file-js-example .file-name');
+		fileName.textContent = fileInput.files[0].name;
+	  }
+	}
+</script>
