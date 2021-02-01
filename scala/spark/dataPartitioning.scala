@@ -47,3 +47,41 @@ def processNewLogs(logFileName: String) {
 
     println("Number of visits to non-subscribed topics: " + offTopicVisits)
 }
+
+/*
+
+All the operations that benefit from partitioning are: 
+
+cogroup(), 
+groupWith(), 
+join(), 
+leftOuterJoin(), 
+rightOuter Join(), 
+groupByKey(), 
+reduceByKey(), 
+combineByKey(),
+lookup().
+
+*/
+
+/*
+
+All the operations that result in a partitioner being set on the output RDD: 
+
+cogroup(), 
+groupWith(), 
+join(), 
+leftOuterJoin(), 
+rightOuter Join(), 
+groupByKey(), 
+reduceByKey(), 
+combineByKey(), 
+partitionBy(), 
+sort(), 
+mapValues() (if the parent RDD has a partitioner), 
+flatMapValues() (if parent has a partitioner), 
+filter() (if parent has a partitioner). 
+
+All other operations will pro‐ duce a result with no partitioner.
+
+*/
