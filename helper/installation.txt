@@ -12,3 +12,6 @@ https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html
 Maven:
 https://mvnrepository.com/
 
+SETI@home - An analogue to Hadoop (not quite the same but conceptually similarities)
+https://setiathome.berkeley.edu
+
