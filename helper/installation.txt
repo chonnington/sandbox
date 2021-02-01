@@ -15,3 +15,5 @@ https://mvnrepository.com/
 SETI@home - An analogue to Hadoop (not quite the same but conceptually similarities)
 https://setiathome.berkeley.edu
 
+Building a personal data warehouse in Snowflake for fun and no profit
+https://www.thomasdziedzic0.com/blog/building-a-personal-data-warehouse-in-snowflake-for-fun-and-no-profit
