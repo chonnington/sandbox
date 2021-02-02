@@ -17,3 +17,6 @@ https://setiathome.berkeley.edu
 
 Building a personal data warehouse in Snowflake for fun and no profit
 https://www.thomasdziedzic0.com/blog/building-a-personal-data-warehouse-in-snowflake-for-fun-and-no-profit
+
+Spark Packages (OOB Ready 2 Go)
+http://spark-packages.org/
