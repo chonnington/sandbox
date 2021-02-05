@@ -25,7 +25,7 @@ object ChecksumAccumulator {
         } 
 }
 
-ChecksumAccumulator.calculate("Every value is an object.")
+// ChecksumAccumulator.calculate("Every value is an object.")
 
 /*
 

@@ -7,3 +7,7 @@ object Summer {
             println(arg + ": " + calculate(arg))
     } 
 }
+
+// to get it to run: 
+// scalac ChecksumAccumulator.scala Summer.scala
+// scala Summer of love
