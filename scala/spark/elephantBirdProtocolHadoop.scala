@@ -1,3 +1,20 @@
+
+
+message Venue {
+    required int32 id = 1; 
+    required string name = 2; 
+    required VenueType type = 3; 
+    optional string address = 4;
+    enum VenueType { 
+        COFFEESHOP = 0; 
+        WORKPLACE = 1;
+        CLUB = 2; 
+        OMNOMNOM = 3; 
+        OTHER = 4;
+    } 
+}
+
+
 val job = new Job()
 val conf = job.getConfiguration LzoProtobufBlockOutputFormat.setClassConf(classOf[Places.Venue], conf); 
 val dnaLounge = Places.Venue.newBuilder()
