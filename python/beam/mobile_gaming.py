@@ -20,6 +20,27 @@ class ExtractAndSumScore(beam.PTransform):
         )
     
     
+class CalculateUserScores(beam.PTransform):
+    
+    """
+    Extract user/score pairs from the event stream using processing time, via
+    global windowing. Get periodic updates on all users' running scores.
+    """
+    
+    def __init__(self, allowed_lateness):
+        beam.PTransform.__init__(self)
+        self.allowed_lateness_seconds = allowed_lateness * 60
+
+    def expand(self, pcoll):
+        return (
+            pcoll
+            | 'LeaderboardUserGlobalWindows' >> beam.WindowInto(
+                beam.window.GlobalWindows(),
+                trigger=trigger.Repeatedly(trigger.AfterCount(10)),
+                accumulation_mode=trigger.AccumulationMode.ACCUMULATING)
+            | 'ExtractAndSumScore' >> ExtractAndSumScore('user'))
+    
+    
 def run(argv=None, save_main_session=True):
     
     """Main entry point; defines and runs the user_score pipeline."""
