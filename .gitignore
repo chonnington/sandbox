@@ -12,3 +12,4 @@ apps/car-czars-develop/public/hot
 apps/car-czars-develop/public/storage
 apps/car-czars-develop/storage/*.key
 apps/car-czars-develop/vendor
+.class
