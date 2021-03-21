@@ -14,3 +14,27 @@ class Rational(n: Int, d: Int) {
 // x: Rational = 1/3
 // scala> val y = new Rational(5, 7)
 // y: Rational = 5/7
+
+class Rational(n: Int, d: Int) {
+    require(d != 0)
+    override def toString = n + "/" + d
+}
+
+class Rational(n: Int, d: Int) {
+    require(d != 0)
+    val numer: Int = n
+    val denom: Int = d
+    override def toString = numer + "/" + denom
+    def add(that: Rational): Rational =
+      new Rational(
+        numer * that.denom + that.numer * denom,
+        denom * that.denom
+) }
+
+
+// scala> val oneHalf = new Rational(1, 2)
+// oneHalf: Rational = 1/2
+// scala> val twoThirds = new Rational(2, 3)
+// twoThirds: Rational = 2/3
+// scala> oneHalf add twoThirds
+// res2: Rational = 7/6
