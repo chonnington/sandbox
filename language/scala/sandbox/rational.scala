@@ -42,10 +42,30 @@ class Rational(n: Int, d: Int) {
         if (this.lessThan(that)) that else this
 }
 
-
 // scala> val oneHalf = new Rational(1, 2)
 // oneHalf: Rational = 1/2
 // scala> val twoThirds = new Rational(2, 3)
 // twoThirds: Rational = 2/3
 // scala> oneHalf add twoThirds
 // res2: Rational = 7/6
+
+class Rational(n: Int, d: Int) {
+
+    require(d != 0)
+
+    val numer: Int = n
+    val denom: Int = d
+
+    def this(n: Int) = this(n, 1) // auxiliary constructor
+
+    override def toString = numer + "/" + denom
+
+    def add(that: Rational): Rational =
+        new Rational(
+                numer * that.denom + that.numer * denom,
+                denom * that.denom
+            )
+}
+
+// scala> val y = new Rational(3)
+// y: Rational = 3/1
