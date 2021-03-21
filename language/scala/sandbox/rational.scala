@@ -2,8 +2,6 @@ class Rational(n: Int, d: Int) {
     println("Created " + n + "/" + d)
 }
 
-new Rational(1, 2)
-
 // scala> new Rational(1, 2)
 // Created 1/2
 // res0: Rational = Rational@2591e0c9
