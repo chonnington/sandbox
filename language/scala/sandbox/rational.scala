@@ -26,10 +26,13 @@ class Rational(n: Int, d: Int) {
     val denom: Int = d
     override def toString = numer + "/" + denom
     def add(that: Rational): Rational =
-      new Rational(
-        numer * that.denom + that.numer * denom,
-        denom * that.denom
-) }
+        new Rational(
+            numer * that.denom + that.numer * denom,
+            denom * that.denom
+    )
+    def lessThan(that: Rational) =
+        this.numer * that.denom < that.numer * this.denom 
+}
 
 
 // scala> val oneHalf = new Rational(1, 2)
